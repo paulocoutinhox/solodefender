@@ -1,63 +1,178 @@
+#include <stdlib.h>
+#include <iostream>
 #include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
-#include "ResourcePath.hpp"
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp> 
 
-int main (int argc, const char * argv[])
+#include "Planet.h"
+#include "Turret.h"
+#include "GameObjects.h"
+#include "Bullet.h"
+#include "Enemy.h"
+#include "Timer.h"
+
+#include "StringConverter.h"
+
+#include "boost/shared_ptr.hpp"
+
+int main()
 {
-    // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+	sf::RenderWindow App(sf::VideoMode(Constants::SCREEN_WIDTH, Constants::SCREEN_HEIGHT, Constants::SCREEN_COLOR), "Solo Defender");
+	App.SetFramerateLimit(Constants::SCREEN_FRAMERATE);
+	
+	sf::Clock Clock;
+    
+	boost::shared_ptr<Image> imageTurret(new Image("turret", "turret.png"));
+	boost::shared_ptr<Image> imageRadar(new Image("radar", "radar.png"));
+	boost::shared_ptr<Image> imageEnemy(new Image("enemy", "enemy.png"));
+	boost::shared_ptr<Image> imagePlanet(new Image("planet", "planet.png"));
+	boost::shared_ptr<Image> imageBullet(new Image("bullet", "bullet.png"));
+	boost::shared_ptr<Image> imageBackground(new Image("background", "background.png"));
 
-    // Load a sprite to display
-    sf::Texture texture;
-    if (!texture.LoadFromFile(ResourcePath() + "cute_image.jpg"))
-    	return EXIT_FAILURE;
-    sf::Sprite sprite(texture);
+	GameObjects::images->push_back(imageTurret);
+	GameObjects::images->push_back(imageRadar);
+	GameObjects::images->push_back(imageEnemy);
+	GameObjects::images->push_back(imagePlanet);
+	GameObjects::images->push_back(imageBullet);
+	GameObjects::images->push_back(imageBackground);
 
-    // Create a graphical text to display
-    sf::Font font;
-    if (!font.LoadFromFile(ResourcePath() + "sansation.ttf"))
-    	return EXIT_FAILURE;
-    sf::Text text("Hello SFML", font, 50);
-    text.SetColor(sf::Color::Black);
+	GameObjects::planet = boost::shared_ptr<Planet>(new Planet());;
+	
+	boost::shared_ptr<Turret> turret1(new Turret());
+	boost::shared_ptr<Turret> turret2(new Turret());
+	boost::shared_ptr<Turret> turret3(new Turret());
+	boost::shared_ptr<Turret> turret4(new Turret());
+	boost::shared_ptr<Turret> turret5(new Turret());
+	
+	turret1->initialize(0);
+	turret2->initialize(72);
+	turret3->initialize(144);
+	turret4->initialize(216);
+	turret5->initialize(288);
 
-    // Load a music to play
-    sf::Music music;
-    if (!music.OpenFromFile(ResourcePath() + "nice_music.ogg"))
-    	return EXIT_FAILURE;
+	GameObjects::turrets->push_back(turret1);
+	GameObjects::turrets->push_back(turret2);
+	GameObjects::turrets->push_back(turret3);
+	GameObjects::turrets->push_back(turret4);
+	GameObjects::turrets->push_back(turret5);
+	
+	sf::Texture backgroundImage;
+	backgroundImage = Image::getImageByName("background");
+	
+	sf::Sprite backgroundSprite(backgroundImage);
 
-    // Play the music
-    music.Play();
-        
+	Timer timer;	
+	
+	while (App.IsOpened())
+	{
+        float ElapsedTime = App.GetFrameTime();
+		
+		GameObjects::planet->update();	
+		
+		for (std::vector< boost::shared_ptr<Turret> >::iterator it = GameObjects::turrets->begin(); it!=GameObjects::turrets->end(); ++it) {
+			((boost::shared_ptr<Turret>)*it)->update();
+		}
 
-    // Start the game loop
-    while (window.IsOpened())
-    {
-    	// Process events
-    	sf::Event event;
-    	while (window.PollEvent(event))
-    	{
-    		// Close window : exit
-    		if (event.Type == sf::Event::Closed)
-    			window.Close();
-            
-    		// Escape pressed : exit
-    		if (event.Type == sf::Event::KeyPressed && event.Key.Code == sf::Keyboard::Escape)
-    			window.Close();
-    	}
+		for (long x = 0; x < (long)GameObjects::enemies->size(); ++x)
+		{
+			boost::shared_ptr<Enemy> enemy = GameObjects::enemies->at(x);
+			enemy->update();
+		}
 
-    	// Clear screen
-    	window.Clear();
-    	
-    	// Draw the sprite
-    	window.Draw(sprite);
-    	
-    	// Draw the string
-    	window.Draw(text);
+		for (long x = 0; x < (long)GameObjects::bullets->size(); ++x)
+		{
+			boost::shared_ptr<Bullet> bullet = GameObjects::bullets->at(x);
+			bullet->update();
+		}
 
-    	// Update the window
-    	window.Display();
+        sf::Event Close;
+        while (App.PollEvent(Close)) 
+		{
+
+            if (Close.Type == sf::Event::Closed)
+			{
+                App.Close();
+			}
+            if ((Close.Type == sf::Event::KeyPressed) && (Close.Key.Code == sf::Keyboard::Escape))
+			{
+                App.Close();
+			}
+			if ((Close.Type == sf::Event::KeyPressed) && (Close.Key.Code == sf::Keyboard::Space))
+			{
+				/*
+				for (std::vector<Turret*>::iterator it = GameObjects::turrets->begin(); it!=GameObjects::turrets->end(); ++it) {
+					Bullet *bullet = new Bullet(*it);
+					GameObjects::bullets->push_back(bullet);
+				}
+				*/
+			}
+			if ((Close.Type == sf::Event::KeyPressed) && (Close.Key.Code == sf::Keyboard::R))
+			{
+				Constants::SHOW_RADAR = !Constants::SHOW_RADAR;
+			}
+
+        }
+
+		if (timer.elasped(500000))
+		{
+			int random = (rand()%4)+1;
+			float x = 0;
+			float y = 0;
+
+			if (random == 2)
+			{
+				x = Constants::SCREEN_WIDTH;
+			}
+			else if (random == 3)
+			{
+				x = Constants::SCREEN_WIDTH;
+				y = Constants::SCREEN_HEIGHT;
+			}
+			else if (random == 4)
+			{
+				y = Constants::SCREEN_HEIGHT;
+			}
+
+			GameObjects::enemies->push_back(boost::shared_ptr<Enemy>(new Enemy(x, y)));
+		}
+		
+		App.Draw(backgroundSprite);
+
+		for (std::vector< boost::shared_ptr<Turret> >::iterator it = GameObjects::turrets->begin(); it!=GameObjects::turrets->end(); ++it) {
+			App.Draw(((boost::shared_ptr<Turret>)*it)->getSprite());
+
+			if (Constants::SHOW_RADAR == true)
+			{
+				App.Draw(((boost::shared_ptr<Turret>)*it)->getRadarSprite());
+			}			
+		}
+		
+		App.Draw(GameObjects::planet->getSprite());
+
+		for (std::vector< boost::shared_ptr<Enemy> >::iterator it = GameObjects::enemies->begin(); it!=GameObjects::enemies->end(); ++it) {
+			App.Draw(((boost::shared_ptr<Enemy>)*it)->getSprite());
+		}
+		
+		for (long x = 0; x < (long)GameObjects::bullets->size(); ++x)
+		{
+			boost::shared_ptr<Bullet> bullet = GameObjects::bullets->at(x);
+			App.Draw(bullet->getSprite());
+		}
+		
+		sf::Text textEnemies( "Enemies: " + StringConverter::toString(GameObjects::enemies->size()) );
+		textEnemies.SetPosition(5, 5);
+		textEnemies.SetCharacterSize(13);
+
+		sf::Text textBullets( "Bullets: " + StringConverter::toString(GameObjects::bullets->size()) );
+		textBullets.SetPosition(5, 25);
+		textBullets.SetCharacterSize(13);
+		
+		App.Draw(textEnemies);
+		App.Draw(textBullets);
+
+        App.Display();
+        App.Clear(); 
     }
 
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
