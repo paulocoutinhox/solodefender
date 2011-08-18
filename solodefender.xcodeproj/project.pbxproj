@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A952F9013FC8FEA00B585F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A952F8F13FC8FEA00B585F7 /* Foundation.framework */; };
+		3A952F9313FC8FEA00B585F7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A952F9213FC8FEA00B585F7 /* main.cpp */; };
+		3A952F9513FC8FEA00B585F7 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A952F9413FC8FEA00B585F7 /* ResourcePath.mm */; };
+		3A952F9913FC8FEA00B585F7 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A952F9813FC8FEA00B585F7 /* sansation.ttf */; };
+		3A952F9B13FC8FEA00B585F7 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A952F9A13FC8FEA00B585F7 /* cute_image.jpg */; };
+		3A952F9D13FC8FEA00B585F7 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 3A952F9C13FC8FEA00B585F7 /* nice_music.ogg */; };
+		3A952FA213FC8FEA00B585F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A952FA013FC8FEA00B585F7 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A952F8B13FC8FEA00B585F7 /* solodefender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solodefender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A952F8F13FC8FEA00B585F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A952F9213FC8FEA00B585F7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3A952F9413FC8FEA00B585F7 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		3A952F9613FC8FEA00B585F7 /* ResourcePath.hpp */ = {isa = PBXFileReference; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		3A952F9813FC8FEA00B585F7 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
+		3A952F9A13FC8FEA00B585F7 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
+		3A952F9C13FC8FEA00B585F7 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
+		3A952F9F13FC8FEA00B585F7 /* solodefender-Info.plist */ = {isa = PBXFileReference; path = "solodefender-Info.plist"; sourceTree = "<group>"; };
+		3A952FA113FC8FEA00B585F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A952F8813FC8FEA00B585F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A952F9013FC8FEA00B585F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A952F7F13FC8FEA00B585F7 = {
+			isa = PBXGroup;
+			children = (
+				3A952F9113FC8FEA00B585F7 /* solodefender */,
+				3A952F8E13FC8FEA00B585F7 /* Frameworks */,
+				3A952F8C13FC8FEA00B585F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A952F8C13FC8FEA00B585F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A952F8B13FC8FEA00B585F7 /* solodefender.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A952F8E13FC8FEA00B585F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A952F8F13FC8FEA00B585F7 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A952F9113FC8FEA00B585F7 /* solodefender */ = {
+			isa = PBXGroup;
+			children = (
+				3A952F9213FC8FEA00B585F7 /* main.cpp */,
+				3A952F9413FC8FEA00B585F7 /* ResourcePath.mm */,
+				3A952F9613FC8FEA00B585F7 /* ResourcePath.hpp */,
+				3A952F9713FC8FEA00B585F7 /* Resources */,
+				3A952F9E13FC8FEA00B585F7 /* Supporting Files */,
+			);
+			path = solodefender;
+			sourceTree = "<group>";
+		};
+		3A952F9713FC8FEA00B585F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A952F9813FC8FEA00B585F7 /* sansation.ttf */,
+				3A952F9A13FC8FEA00B585F7 /* cute_image.jpg */,
+				3A952F9C13FC8FEA00B585F7 /* nice_music.ogg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3A952F9E13FC8FEA00B585F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A952F9F13FC8FEA00B585F7 /* solodefender-Info.plist */,
+				3A952FA013FC8FEA00B585F7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A952F8A13FC8FEA00B585F7 /* solodefender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A952FA513FC8FEA00B585F7 /* Build configuration list for PBXNativeTarget "solodefender" */;
+			buildPhases = (
+				3A952F8613FC8FEA00B585F7 /* ShellScript */,
+				3A952F8713FC8FEA00B585F7 /* Sources */,
+				3A952F8813FC8FEA00B585F7 /* Frameworks */,
+				3A952F8913FC8FEA00B585F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = solodefender;
+			productName = solodefender;
+			productReference = 3A952F8B13FC8FEA00B585F7 /* solodefender.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A952F8113FC8FEA00B585F7 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 3A952F8413FC8FEA00B585F7 /* Build configuration list for PBXProject "solodefender" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3A952F7F13FC8FEA00B585F7;
+			productRefGroup = 3A952F8C13FC8FEA00B585F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A952F8A13FC8FEA00B585F7 /* solodefender */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A952F8913FC8FEA00B585F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A952F9913FC8FEA00B585F7 /* sansation.ttf in Resources */,
+				3A952F9B13FC8FEA00B585F7 /* cute_image.jpg in Resources */,
+				3A952F9D13FC8FEA00B585F7 /* nice_music.ogg in Resources */,
+				3A952FA213FC8FEA00B585F7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A952F8613FC8FEA00B585F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required sfml dylibs into the application bundle frameworks folder\n# NB : this script assumes that if moduleX is required in release mode then it is also required in debug mode.\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    if [ -z $1 ]\n    then\n        echo \"no parameter! ERROR!\"\n        exit\n    else\n        if [ $CONFIGURATION = \"Debug\" ]\n        then\n            rm -f $BUILT_PRODUCTS_DIR/test.app/Contents/Frameworks/libsfml-$1.2.dylib\n            ditto /usr/local/lib/libsfml-$1-d.2.dylib $BUILT_PRODUCTS_DIR/test.app/Contents/Frameworks/libsfml-$1-d.2.dylib\n        else\n            rm -f $BUILT_PRODUCTS_DIR/test.app/Contents/Frameworks/libsfml-$1-d.2.dylib\n            ditto /usr/local/lib/libsfml-$1.2.dylib $BUILT_PRODUCTS_DIR/test.app/Contents/Frameworks/libsfml-$1.2.dylib\n        fi\n    fi\n}\n\nif [ -n \"$SYSTEM_RELEASE\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$AUDIO_RELEASE\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$NETWORK_RELEASE\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$WINDOW_RELEASE\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$GRAPHICS_RELEASE\" ]\nthen\n    require \"graphics\"\nfi\n\t\t\t\t\t";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A952F8713FC8FEA00B585F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A952F9313FC8FEA00B585F7 /* main.cpp in Sources */,
+				3A952F9513FC8FEA00B585F7 /* ResourcePath.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A952FA013FC8FEA00B585F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A952FA113FC8FEA00B585F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A952FA313FC8FEA00B585F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				AUDIO_DEBUG = "-lsfml-audio-d";
+				AUDIO_RELEASE = "-lsfml-audio";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GRAPHICS_DEBUG = "-lsfml-graphics-d";
+				GRAPHICS_RELEASE = "-lsfml-graphics";
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					/usr/local/include/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				NETWORK_DEBUG = "-lsfml-network-d";
+				NETWORK_RELEASE = "-lsfml-network";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(SYSTEM_DEBUG)",
+					"$(WINDOW_DEBUG)",
+					"$(GRAPHICS_DEBUG)",
+					"$(AUDIO_DEBUG)",
+					"$(NETWORK_DEBUG)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SYSTEM_DEBUG = "-lsfml-system-d";
+				SYSTEM_RELEASE = "-lsfml-system";
+				WINDOW_DEBUG = "-lsfml-window-d";
+				WINDOW_RELEASE = "-lsfml-window";
+			};
+			name = Debug;
+		};
+		3A952FA413FC8FEA00B585F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				AUDIO_DEBUG = "-lsfml-audio-d";
+				AUDIO_RELEASE = "-lsfml-audio";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GRAPHICS_DEBUG = "-lsfml-graphics-d";
+				GRAPHICS_RELEASE = "-lsfml-graphics";
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					/usr/local/include/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				NETWORK_DEBUG = "-lsfml-network-d";
+				NETWORK_RELEASE = "-lsfml-network";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(SYSTEM_RELEASE)",
+					"$(WINDOW_RELEASE)",
+					"$(GRAPHICS_RELEASE)",
+					"$(AUDIO_RELEASE)",
+					"$(NETWORK_RELEASE)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SYSTEM_DEBUG = "-lsfml-system-d";
+				SYSTEM_RELEASE = "-lsfml-system";
+				WINDOW_DEBUG = "-lsfml-window-d";
+				WINDOW_RELEASE = "-lsfml-window";
+			};
+			name = Release;
+		};
+		3A952FA613FC8FEA00B585F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "solodefender/solodefender-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3A952FA713FC8FEA00B585F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "solodefender/solodefender-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A952F8413FC8FEA00B585F7 /* Build configuration list for PBXProject "solodefender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A952FA313FC8FEA00B585F7 /* Debug */,
+				3A952FA413FC8FEA00B585F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A952FA513FC8FEA00B585F7 /* Build configuration list for PBXNativeTarget "solodefender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A952FA613FC8FEA00B585F7 /* Debug */,
+				3A952FA713FC8FEA00B585F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A952F8113FC8FEA00B585F7 /* Project object */;
+}
