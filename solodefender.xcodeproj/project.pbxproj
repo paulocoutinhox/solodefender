@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A0A401113FC9EB5008666C1 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A400913FC9EB5008666C1 /* background.png */; };
-		3A0A401213FC9EB5008666C1 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A400A13FC9EB5008666C1 /* bullet.png */; };
-		3A0A401313FC9EB5008666C1 /* cannon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A400B13FC9EB5008666C1 /* cannon.png */; };
-		3A0A401413FC9EB5008666C1 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A400C13FC9EB5008666C1 /* enemy.png */; };
-		3A0A401513FC9EB5008666C1 /* planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A400D13FC9EB5008666C1 /* planet.png */; };
-		3A0A401613FC9EB5008666C1 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A400E13FC9EB5008666C1 /* radar.png */; };
-		3A0A401713FC9EB5008666C1 /* scout.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A400F13FC9EB5008666C1 /* scout.png */; };
-		3A0A401813FC9EB5008666C1 /* turret.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A401013FC9EB5008666C1 /* turret.png */; };
 		3A952F9013FC8FEA00B585F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A952F8F13FC8FEA00B585F7 /* Foundation.framework */; };
 		3A952F9513FC8FEA00B585F7 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A952F9413FC8FEA00B585F7 /* ResourcePath.mm */; };
 		3A952FA213FC8FEA00B585F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A952FA013FC8FEA00B585F7 /* InfoPlist.strings */; };
@@ -30,17 +22,10 @@
 		3A952FF513FC939500B585F7 /* StringConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A952FE513FC939500B585F7 /* StringConverter.cpp */; };
 		3A952FF613FC939500B585F7 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A952FE713FC939500B585F7 /* Timer.cpp */; };
 		3A952FF713FC939500B585F7 /* Turret.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A952FE913FC939500B585F7 /* Turret.cpp */; };
+		3AC82EC913FE1D570050291F /* data in Resources */ = {isa = PBXBuildFile; fileRef = 3AC82EC813FE1D570050291F /* data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A0A400913FC9EB5008666C1 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		3A0A400A13FC9EB5008666C1 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
-		3A0A400B13FC9EB5008666C1 /* cannon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cannon.png; sourceTree = "<group>"; };
-		3A0A400C13FC9EB5008666C1 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
-		3A0A400D13FC9EB5008666C1 /* planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet.png; sourceTree = "<group>"; };
-		3A0A400E13FC9EB5008666C1 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
-		3A0A400F13FC9EB5008666C1 /* scout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scout.png; sourceTree = "<group>"; };
-		3A0A401013FC9EB5008666C1 /* turret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turret.png; sourceTree = "<group>"; };
 		3A952F8B13FC8FEA00B585F7 /* solodefender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solodefender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A952F8F13FC8FEA00B585F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A952F9413FC8FEA00B585F7 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -70,6 +55,7 @@
 		3A952FE813FC939500B585F7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		3A952FE913FC939500B585F7 /* Turret.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Turret.cpp; sourceTree = "<group>"; };
 		3A952FEA13FC939500B585F7 /* Turret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turret.h; sourceTree = "<group>"; };
+		3AC82EC813FE1D570050291F /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,29 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A0A400713FC9EB5008666C1 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				3A0A400813FC9EB5008666C1 /* images */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		3A0A400813FC9EB5008666C1 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				3A0A400913FC9EB5008666C1 /* background.png */,
-				3A0A400A13FC9EB5008666C1 /* bullet.png */,
-				3A0A400B13FC9EB5008666C1 /* cannon.png */,
-				3A0A400C13FC9EB5008666C1 /* enemy.png */,
-				3A0A400D13FC9EB5008666C1 /* planet.png */,
-				3A0A400E13FC9EB5008666C1 /* radar.png */,
-				3A0A400F13FC9EB5008666C1 /* scout.png */,
-				3A0A401013FC9EB5008666C1 /* turret.png */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
 		3A952F7F13FC8FEA00B585F7 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +98,7 @@
 		3A952F9113FC8FEA00B585F7 /* solodefender */ = {
 			isa = PBXGroup;
 			children = (
+				3AC82EC813FE1D570050291F /* data */,
 				3A952FD213FC939500B585F7 /* Bullet.cpp */,
 				3A952FD313FC939500B585F7 /* Bullet.h */,
 				3A952FD413FC939500B585F7 /* Collision.cpp */,
@@ -169,7 +133,6 @@
 		3A952F9713FC8FEA00B585F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3A0A400713FC9EB5008666C1 /* data */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -232,14 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A952FA213FC8FEA00B585F7 /* InfoPlist.strings in Resources */,
-				3A0A401113FC9EB5008666C1 /* background.png in Resources */,
-				3A0A401213FC9EB5008666C1 /* bullet.png in Resources */,
-				3A0A401313FC9EB5008666C1 /* cannon.png in Resources */,
-				3A0A401413FC9EB5008666C1 /* enemy.png in Resources */,
-				3A0A401513FC9EB5008666C1 /* planet.png in Resources */,
-				3A0A401613FC9EB5008666C1 /* radar.png in Resources */,
-				3A0A401713FC9EB5008666C1 /* scout.png in Resources */,
-				3A0A401813FC9EB5008666C1 /* turret.png in Resources */,
+				3AC82EC913FE1D570050291F /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,8 +3,7 @@
 Image::Image(std::string name, std::string imagePath)
 {
 	this->name = name;
-	//image.LoadFromFile(ResourcePath() + "data/images/" + imagePath);
-    image.LoadFromFile(ResourcePath() + imagePath);
+	image.LoadFromFile(ResourcePath() + "data/images/" + imagePath);
 }
 
 Image::~Image(void)
